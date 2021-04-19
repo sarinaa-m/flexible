@@ -1,0 +1,273 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* header */
+#header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/hero.jpg") no-repeat left top / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* nav */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.nav .logo {
+  font-size: 30px;
+  color: white;
+}
+.nav .menu {
+  display: flex;
+  align-items: center;
+}
+.nav .menu li {
+  margin-left: 30px;
+}
+.nav .menu li:first-child {
+  margin-left: 0;
+}
+.nav .menu li a {
+  color: white;
+}
+
+.nav .menu li a:hover {
+  opacity: 0.9;
+}
+/* header content */
+.header-content {
+  text-align: center;
+  color: white;
+}
+.header-content h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, red, white, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.header-content p {
+  margin: 30px 0;
+  font-size: 20px;
+}
+.header-content a {
+  background-color: dodgerblue;
+  padding: 15px 30px;
+  display: inline-flex;
+  color: white;
+}
+.header-content a:hover {
+  opacity: 0.9;
+}
+
+/* main */
+.main {
+  width: 100%;
+}
+.sections-title {
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 0;
+  margin-bottom: 50px;
+  position: relative;
+}
+.sections-title::after {
+  content: "";
+  width: 150px;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.sections-title h2 {
+  margin-bottom: 20px;
+}
+.sections-title p {
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7em;
+  font-size: 20px;
+}
+/* works */
+.works-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.work1,
+.work4 {
+  width: 38%;
+  height: 300px;
+}
+
+.work2,
+.work3 {
+  width: 60%;
+  height: 300px;
+}
+.work1 {
+  background: url("../images/coast.jpg") no-repeat center center / cover;
+}
+.work2 {
+  background: url("../images/island.jpg") no-repeat center center / cover;
+}
+.work3 {
+  background: url("../images/balloon.jpg") no-repeat center center / cover;
+}
+.work4 {
+  background: url("../images/mountain.jpg") no-repeat center center / cover;
+}
+.work1,
+.work2 {
+  margin-bottom: 25px;
+}
+/* footer */
+#footer {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  padding: 30px 0;
+  text-align: center;
+}
+
+/* about-us */
+.about-us {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 30px 0;
+}
+.about-us-inner {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.about-us-col {
+  width: 32%;
+  text-align: center;
+}
+.about-us-col i {
+  font-size: 30px;
+  color: dodgerblue;
+}
+.about-us-col h2 {
+  margin: 15px 0;
+}
+.about-us-col p {
+  line-height: 1.7em;
+}
+/* contact us */
+.contact-us {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.contact-us input {
+  height: 40px;
+  flex-grow: 1;
+  padding: 0 10px;
+}
+.contact-us button {
+  background-color: dodgerblue;
+  color: white;
+  padding: 0 25px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+}
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .nav {
+    padding: 20px;
+  }
+  .header-content h1 {
+    font-size: 30px;
+  }
+  /* works */
+  .work {
+    width: 49%;
+  }
+  /* about us */
+  .about-us-inner {
+    flex-wrap: wrap;
+  }
+  .about-us-col {
+    width: 100%;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+  .nav .logo {
+    width: 100%;
+    text-align: center;
+  }
+  .nav .menu {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .header-content {
+    transform: translateY(50px);
+    padding: 0 15px;
+  }
+  /* works */
+  .work {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 350px) {
+  .contact-us {
+    flex-wrap: wrap;
+  }
+  .contact-us input {
+    width: 100%;
+  }
+  .contact-us button {
+    width: 100%;
+    margin-left: 0;
+    height: 40px;
+    margin-top: 10px;
+  }
+}
